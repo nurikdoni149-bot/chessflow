@@ -9,6 +9,7 @@ import { INITIAL_COACH_MESSAGE } from "@/lib/move-quality";
 import { ACHIEVEMENTS } from "@/lib/achievements";
 import { BOARD_THEMES } from "@/lib/board-themes";
 import AuthButton from "@/components/play/AuthButton";
+import Link from "next/link";
 
 const INITIAL_GAME: GameState = {
   fen: new Chess().fen(),
@@ -264,29 +265,33 @@ const [showGameOverModal, setShowGameOverModal] =
     href: "/premium",
   },
 ].map((item) => (
-  <a
+  <Link
     key={item.name}
     href={item.href}
     className="rounded-lg px-3 py-1.5 text-sm text-zinc-400 transition hover:bg-white/5 hover:text-white"
   >
     {item.name}
-  </a>
+    </Link>
 ))}
           </nav>
 
-          <div className="flex items-center gap-2 sm:gap-3">
-            <span className="hidden items-center gap-1.5 rounded-full border border-amber-500/30 bg-gradient-to-r from-amber-500/10 to-orange-500/10 px-2.5 py-1 text-xs font-medium text-amber-200 sm:inline-flex">
-              <Crown className="h-3 w-3 text-amber-400" />
-              Premium
-            </span>
-            <button
-              type="button"
-              className="hidden rounded-lg bg-white px-3 py-1.5 text-xs font-semibold text-zinc-900 transition hover:bg-zinc-200 sm:block"
-            >
-              Upgrade
-            </button>
-            <AuthButton />
-          </div>
+          <div className="flex items-center gap-3">
+  <Link
+    href="/premium"
+    className="rounded-full border border-yellow-500/20 bg-yellow-500/10 px-4 py-2 text-sm font-medium text-yellow-300 transition hover:bg-yellow-500/20"
+  >
+    👑 Premium
+  </Link>
+
+  <Link
+    href="/premium"
+    className="rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 px-5 py-2 font-semibold text-white transition hover:scale-105"
+  >
+    Upgrade
+  </Link>
+
+  <AuthButton />
+</div>
         </div>
       </header>
 
