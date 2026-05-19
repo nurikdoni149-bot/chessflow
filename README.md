@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Personal Note
 
-## Getting Started
+This was my first experience building a project like this from scratch.
 
-First, run the development server:
+I genuinely put a lot of effort into ChessFlow, and while it may not be perfect, I learned an incredible amount during the process. I really enjoyed building it.
+
+I honestly do not know if I will pass your incubator selection, and maybe my current technical skills are still behind some other candidates. But when it comes to motivation, consistency, and willingness to learn — I know I can compete with anyone.
+
+This project made me realize that software development is truly something I want to pursue seriously.
+
+Thank you for giving me the opportunity and motivation to build something real.
+
+
+
+# ChessFlow ♞
+
+Modern AI-powered chess platform built with Next.js, Stockfish and Firebase.
+
+## Features
+
+- Play against Stockfish AI
+
+- AI Coach move analysis
+
+- Google Authentication
+
+- Premium page UI
+
+- Learn section
+
+- Puzzle section
+
+- Analysis page
+
+- Modern responsive design
+
+- Vercel deployment
+
+## Tech Stack
+
+- Next.js 15
+
+- TypeScript
+
+- Tailwind CSS
+
+- Firebase Auth
+
+- Stockfish
+
+- react-chessboard
+
+- chess.js
+
+## Live Demo
+
+[ChessFlow — AI Chess Studio](https://chessflow-ixuq8e9rs-nurikdoni149-bots-projects.vercel.app/)
+
+## Installation
 
 ```bash
+
+git clone [https://github.com/nurikdoni149-bot/chessflow.git](https://github.com/nurikdoni149-bot/chessflow.git)
+
+cd chessflow
+
+npm install
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Environment Variables
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Create `.env.local`:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
 
-## Learn More
+NEXT_PUBLIC_FIREBASE_API_KEY=
 
-To learn more about Next.js, take a look at the following resources:
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=
 
-## Deploy on Vercel
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+NEXT_PUBLIC_FIREBASE_APP_ID=
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+
+## Deployment
+
+Project deployed with Vercel.
+
+## Author
+
+Nurkhan Daniar
