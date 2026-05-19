@@ -55,12 +55,9 @@ export default function PuzzlesPage() {
 
         <div className="mt-8 grid gap-8 lg:grid-cols-[420px_1fr]">
           <div className="overflow-hidden rounded-2xl border border-white/10">
-            <Chessboard
-              position={puzzle.fen}
-              onPieceDrop={(sourceSquare, targetSquare) =>
-                handleMove(sourceSquare, targetSquare)
-              }
-            />
+          <div className="flex aspect-square items-center justify-center rounded-2xl bg-black/30 text-zinc-500">
+  Puzzle board coming soon
+</div>
           </div>
 
           <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
