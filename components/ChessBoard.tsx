@@ -222,7 +222,7 @@ export default function ChessBoard({
   
     const move = game.move({
       from: sourceSquare,
-      to: targetSquare,
+      to: targetSquare!,
       promotion: "q",
     });
   
