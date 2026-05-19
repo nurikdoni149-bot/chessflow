@@ -210,41 +210,36 @@ export default function ChessBoard({
     [],
   );
 
-  const onPieceDrop = useCallback(
-    ({ sourceSquare, targetSquare }: PieceDropHandlerArgs): boolean => {
-      if (!targetSquare || !canPlayerMove) return false;
-
-      const fenBefore = fen;
-      const gameCopy = new Chess(fenBefore);
-
-      try {
-        const move = gameCopy.move({
-          from: sourceSquare,
-          to: targetSquare,
-          promotion: "q",
-        });
-
-        const nextFen = gameCopy.fen();
-        const nextMoves = [...moves, move.san];
-
-        setFen(nextFen);
-        setMoves(nextMoves);
-
-        void requestCoachAnalysis(fenBefore, nextFen, move.lan, move.san);
-       
-
-        if (!gameCopy.isGameOver() && gameCopy.turn() === "b") {
-          void requestAiMove(nextFen, nextMoves);
-        }
-
-        return true;
-      } catch {
-        return false;
-      }
-    },
-    [fen, moves, canPlayerMove, requestAiMove, requestCoachAnalysis],
-  );
-
+  const onPieceDrop = ({
+    sourceSquare,
+    targetSquare,
+  }: PieceDropHandlerArgs) => {
+    if (!canPlayerMove) {
+      return false;
+    }
+  
+    const game = new Chess(fen);
+  
+    const move = game.move({
+      from: sourceSquare,
+      to: targetSquare,
+      promotion: "q",
+    });
+  
+    if (!move) {
+      return false;
+    }
+  
+    const updatedFen = game.fen();
+    const updatedMoves = [...moves, move.san];
+  
+    setFen(updatedFen);
+    setMoves(updatedMoves);
+  
+    requestAiMove(updatedFen, updatedMoves);
+  
+    return true;
+  };
   const canDragPiece = useCallback(
     ({ square }: { square: string | null }) => {
       if (!canPlayerMove || !square) return false;
@@ -262,14 +257,10 @@ export default function ChessBoard({
 
   >
 <Chessboard
-  id="board"
   options={{
     position: fen,
     onPieceDrop,
-    canDragPiece,
-    allowDragging: canPlayerMove,
   }}
-
 />
   
       {isThinking && (
