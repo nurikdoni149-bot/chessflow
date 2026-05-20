@@ -1,40 +1,60 @@
 ## Personal Note
 
-This was my first experience building a project like this from scratch.
+This was my first experience building a project like this completely from scratch.
 
-I genuinely put a lot of effort into ChessFlow, and while it may not be perfect, I learned an incredible amount during the process. I really enjoyed building it.
+I genuinely put a lot of effort into ChessFlow, and while it may not be perfect, I learned an incredible amount throughout the process. I truly enjoyed every part of building it.
 
-I honestly do not know if I will pass your incubator selection, and maybe my current technical skills are still behind some other candidates. But when it comes to motivation, consistency, and willingness to learn — I know I can compete with anyone.
+I honestly do not know whether I will pass your incubator selection, and maybe my current technical skills are still behind some other candidates. But when it comes to motivation, discipline, and willingness to learn — I know I can compete with anyone.
 
-This project made me realize that software development is truly something I want to pursue seriously.
+This project helped me realize that software development is genuinely something I want to pursue seriously.
 
 Thank you for giving me the opportunity and motivation to build something real.
 
 
 
-# ChessFlow ♞
+# ChessFlow
 
-Modern AI-powered chess platform built with Next.js, Stockfish and Firebase.
+Modern AI-powered chess platform built with Next.js, TypeScript, Firebase and Stockfish.
 
-## Features
+## Project Overview
 
-- Play against Stockfish AI
+### Play
 
-- AI Coach move analysis
+The main part of the project is the Play section, where users can play chess against Stockfish AI in real time.
 
-- Google Authentication
+The board supports legal move validation, move history tracking, AI responses, and dynamic game states.
 
-- Premium page UI
+### AI Coach
 
-- Learn section
+After each move, the AI Coach analyzes the position and gives feedback about move quality using Stockfish evaluation.
 
-- Puzzle section
+The goal was to make the experience feel educational instead of simply playing against an engine.
 
-- Analysis page
+### Authentication
 
-- Modern responsive design
+Users can sign in with Google using Firebase Authentication.
 
-- Vercel deployment
+This was my first experience working with authentication systems and OAuth flows in a real project.
+
+### Premium
+
+I also created a Premium page to simulate how a subscription-based chess platform could look and feel.
+
+### Learn
+
+The Learn section was created as a foundation for future educational content and chess tutorials.
+
+### Puzzles
+
+The Puzzles page is currently a work in progress and was added as part of the platform structure for future tactical training features.
+
+### Analysis
+
+The Analysis section is intended for deeper game review and position analysis features.
+
+### Deployment
+
+The entire project was deployed using Vercel, including Firebase environment variables and production configuration.
 
 ## Tech Stack
 
@@ -44,13 +64,15 @@ Modern AI-powered chess platform built with Next.js, Stockfish and Firebase.
 
 - Tailwind CSS
 
-- Firebase Auth
+- Firebase Authentication
 
 - Stockfish
 
 - react-chessboard
 
 - chess.js
+
+- Vercel
 
 ## Live Demo
 
